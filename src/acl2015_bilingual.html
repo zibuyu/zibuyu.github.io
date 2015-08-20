@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://nlp.csai.tsinghua.edu.cn/~tzshi/projects/acl2015.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Learning Cross-lingual Word Embeddings via Matrix Co-factorization</title>
+<link rel="stylesheet" type="../text/css" href="../lzy.css">
+</head>
+<body>
+
+<div>
+<center>
+<h2>Learning Cross-lingual Word Embeddings via Matrix Co-factorization</h2>
+<h3><a href="http://nlp.csai.tsinghua.edu.cn/~tzshi/">Tianze Shi</a>, Zhiyuan Liu, Yang Liu and Maosong Sun</h3>
+<h3>In <em>Proc. of ACL (short papers)</em>, 2015</h3>
+</center>
+</div>
+
+<div>
+<h3>Research Summary</h3>
+<p>
+A joint-space model for cross-lingual distributed representations generalizes language-invariant semantic features. In this project, we present a matrix co-factorization framework for learning cross-lingual word embeddings. We explicitly define monolingual training objectives in the form of matrix decomposition, and induce cross-lingual constraints for simultaneously factorizing monolingual matrices. The cross-lingual constraints can be derived from parallel corpora, with or without word alignments. Empirical results on a task of cross-lingual document classification show that our method is effective to encode cross-lingual knowledge as constraints for cross-lingual word embeddings.
+</p>
+<p>
+<span>
+<a href="../publications/acl2015_bilingual.pdf">[paper (pdf)]</a>
+</span>
+<span>
+<a href="../publications/acl2015_bilingual_long.pdf">[author's version (pdf)]</a>
+</span>
+</p>
+</div>
+
+<div>
+<h3>Code</h3>
+<p>
+Licensed under the <a href="">Apache License, Version 2.0</a>
+</p>
+<p>
+This code is a simple implementation of the ACL 2015 paper, and it is based on <a href="http://www-nlp.stanford.edu/projects/glove/">GloVe</a> implemented by Jeffrey Pennington
+</p>
+<p>
+<a href="acl2015code.zip">[code (v0.01)]</a>
+</p>
+<h3>Usage</h3>
+<ul>
+<li>
+run <code>make</code> to compile
+</li>
+<li>
+run <code>./vocab-count.out &lt; corpus.txt &gt; vocab.txt</code> to determine vocabulary (run once for each language), or you may use a given vocabulary from elsewhere. 
+</li>
+<li>
+run <code>./cooccur-mono.out &lt; corpus.txt &gt; mono.cooc </code> to count monolingual co-occurrences. 
+</li>
+<li>
+run <code>./cooccur-clc-wa.out &lt; corpus.txt &gt; cross.cooc </code> to count cross-lingual co-occurrences. (similar for <code>./cooccur-clc+wa.out &lt; A3.final &gt; cross.cooc</code>. For CLSim, you need to convert t3.final into the same file format produced by <code>cooccur*.out</code>)
+</li>
+<li>
+run <code>./summarize-real.out -input-file mono.cooc -save-file mono.cooc </code> to convert each co-occurrence file into sparse format and calculate PMI values. 
+</li>
+<li>
+run <code>./mf-bi-clc.out -vocab-file1 vocab1.txt -vocab-file2 vocab2.txt -iter 30 -threads 20 -input-file1 mono1.cooc -input-file2 mono2.cooc -input-file-bi bi.cooc -vector-size 40 -binary 1 -save-file1 vectors1.bin -save-file2 vectors2.bin</code> to learn cross-lingual embeddings. (similar for <code>./mf-bi-clsim</code>)
+</li>
+</ul>
+</div>
+
+<div>
+<p>
+This research is supported by the 973 Program (No. 2014CB340501) and the National Natural Science Foundation of China (NSFC No. 61133012, 61170196 and 61202140). 
+</p>
+</div>
+
+</body></html>

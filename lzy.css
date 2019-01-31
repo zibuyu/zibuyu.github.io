@@ -1,127 +1,97 @@
 body {
-	color: #000000;
-	background-color: #FFFFFF;
-	margin: 15px 50px 15px 50px;
-	max-width: 1200;
-	text-align: justify;
-	font-family: "Palatino Linotype", "Microsoft yahei", "Book Antiqua", Palatino, serif;
+    background: rgb(3,41,80);
+    font: normal 100% Verdana;
+    margin: 0;
+    color: #555;
+    text-align: justify;
 }
 
-img {
-	vertical-align: middle;
-	border: 0;
+body > * {
+    width: 900px;
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    text-align: justify;
 }
 
-a.intlink {
-	color: #008000;
+a {
+    color: #28D;
+    text-decoration: none;
+    height: 50%;
 }
+
+cite {
+ font: normal 80% sans-serif;
+}
+
 
 h1 {
-	font-family: "Palatino Linotype", "Microsoft yahei", "Book Antiqua", Palatino, serif;
+    margin: 0;
+}
+h2 {
+    font-size: 150%;
+    margin: 0;
+}
+h3, h4, h5, h6 {
+    margin: 0;
+    font-size: 120%;
 }
 
-h3,h4,h5 {
-	font-family: "Palatino Linotype", "Microsoft yahei", "Book Antiqua", Palatino, serif;
+
+a strong {
+  color: inherit;
+  font-weight: 900;
 }
 
-hr {
-	height: 1px;
+strong {
+  font-weight: 700;
+  color: #151515;
 }
 
-.year {
-	padding-left: 50px;
-	clear: both;
-	padding-right: 50px;
-	padding-top: 20px;
+em {
+  font-weight: 100;
 }
 
-.keywords {
-	margin-left: 20px;
-	clear: both;
+ul {
+    list-style-type: square;
+    padding: 0 1em;
 }
 
-.keyword {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
-	float: left;
-	background: #CCCCCC;
-	margin-right: 10px;
-	padding-left: 5px;
-	padding-right: 5px;
+li {
+    padding:  5px;
 }
 
-.JF {
-	font-style: italic;
-	margin-left: 20px;
+td { padding: 0px 5px 0px 0px; }
+
+code, pre, tt {
+    font: 12pt monospace;
 }
 
-.authors {
-	margin-left: 20px;
+pre {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5em;
 }
 
-.paper {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 20px;
-	font-size: 12px;
+
+header {
+    position: relative;
 }
 
-.note {
-	clear: both;
-	margin-left: 40px;
-	border-left-style: double;
-	border-top-color: #000000;
-	border-right-color: #000000;
-	border-bottom-color: #000000;
-	border-left-color: #000000;
+header nav {
+    font-size: 110%;
+    position: absolute;
+    right: 0;
+    top: 20px;
 }
 
-.title {
-	font-weight: bold;
-	border-bottom-style: ridge;
-	font-size: 14px;
+header nav ul {
+    padding: 0;
+    margin: 0;
 }
 
-.header {
-	margin-left: 50px;
-	clear: both;
-	height: 80px;
-	vertical-align: bottom;
-}
-
-.bib {
-	clear: both;
-}
-
-.pic {
-	background-image: url(images/keyword.jpg);
-	background-repeat: no-repeat;
-	clear: none;
-	float: left;
-	height: 80px;
-	width: 80px;
-}
-
-.year_number {
-	
-}
-
-.year_number {
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
-	background-color: #CCCCCC;
-	border-top-style: solid;
-	border-left-style: solid;
-	font-size: 16px;
-	font-weight: bold;
-}
-
-p {
-	
+header nav li {
+    display: inline-block;
+    margin: 0 0.15em;
+    vertical-align: middle;
 }

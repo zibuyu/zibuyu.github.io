@@ -7,7 +7,7 @@ body {
 }
 
 body > * {
-    width: 900px;
+    width: 1000px;
     padding: 20px;
     margin: 20px auto;
     background: white;

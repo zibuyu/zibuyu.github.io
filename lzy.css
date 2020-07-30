@@ -14,6 +14,11 @@ body > * {
     text-align: justify;
 }
 
+table{
+    border-collapse: separate; 
+    border-spacing: 5px 5px;  /* 水平间距 垂直间距 */
+}
+
 a {
     color: #28D;
     text-decoration: none;
